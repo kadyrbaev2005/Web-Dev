@@ -1,0 +1,81 @@
+body {
+    font-family: Arial;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-mockup img {
+    margin-right: 80px;
+    max-width: 350px;
+}
+.right-side {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.login-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    width: 350px;
+}
+.instagram-font {
+    max-width: 150px;
+}
+.login-box form input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3fa7ec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.or {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+.login-facebook img{
+    max-width: 30px;
+}
+.register-box {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    text-align: center;
+}
+.download-apps {
+    text-align: center;
+    margin-top: 20px;
+}
+.app-links img {
+    width: 130px;
+    margin: 5px;
+}
+a {
+    color: #1877f2;
+    text-decoration: none;
+}
