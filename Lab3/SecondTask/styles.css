@@ -6,7 +6,7 @@ body {
 .container {
     max-width: 400px;
     margin: auto;
-    text-align: left;
+    text-align: center;
 }
 input {
     width: 70%;
