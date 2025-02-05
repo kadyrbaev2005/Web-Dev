@@ -26,7 +26,7 @@ body {
 }
 .main-section {
     display: flex;
-    justify-content: center;
+    margin-left: 50px;
     align-items: center;
     padding: 50px;
     background-color: #e6e6e6;
