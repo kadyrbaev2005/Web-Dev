@@ -1,8 +1,9 @@
 function addTask() {
     let taskInput = document.getElementById("taskInput");
-    let taskText = taskInput.value.trim();
-    if (taskText === "") return;
-    
+    let taskText = taskInput.value();
+    if (taskText === "") {
+        return;
+    }
     let li = document.createElement("li");
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
