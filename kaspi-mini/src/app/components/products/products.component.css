@@ -2,24 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .product-card {
+}
+.product-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     width: 250px;
     text-align: center;
     background-color: #f9f9f9;
-  }
-  
-  .product-card img {
+}
+.product-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-  }
-  
-  .share-buttons button {
+}
+.share-buttons button {
     margin: 5px;
     padding: 8px 12px;
     border: none;
@@ -27,9 +24,14 @@
     color: white;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .share-buttons button:hover {
+}
+.share-buttons button:hover {
     background-color: #0056b3;
-  }
-  
+}
+p{
+    font-family: Arial;
+}
+a{
+    font-family: Arial;
+    text-decoration: none;
+}  

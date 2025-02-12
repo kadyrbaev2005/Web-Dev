@@ -11,11 +11,11 @@ import { CommonModule } from '@angular/common';
 export class ProductsComponent {
   products = [
     {
-      image: 'https://kaspi.kz/image1.jpg',
-      name: 'Product 1',
-      description: 'Description for product 1',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h3c/h70/63944536522782.jpg?format=gallery-medium',
+      name: 'iPhone 11',
+      description: 'Смартфон Apple iPhone 11 64Gb Slim Box черный',
       rating: 4.5,
-      link: 'https://kaspi.kz/product1'
+      link: 'https://kaspi.kz/shop/p/apple-iphone-11-64gb-slim-box-chernyi-100692387/?c=471010000'
     },
     {
       image: 'https://kaspi.kz/image2.jpg',
