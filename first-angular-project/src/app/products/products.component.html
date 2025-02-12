@@ -1,1 +1,10 @@
-<p>products works!</p>
+<div class="product-list">
+    <div class="product" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.name">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating }} ⭐</p>
+      <button (click)="share(product, 'whatsapp')">Share on WhatsApp</button>
+      <button (click)="share(product, 'telegram')">Share on Telegram</button>
+    </div>
+</div>
