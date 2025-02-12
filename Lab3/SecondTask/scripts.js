@@ -13,7 +13,7 @@ function addTask() {
     span.textContent = taskText;
     
     let deleteBtn = document.createElement("span");
-    deleteBtn.textContent = "x";
+    deleteBtn.textContent = "delete";
     deleteBtn.classList.add("delete");
     deleteBtn.onclick = function() {
         this.parentElement.remove();
@@ -23,6 +23,11 @@ function addTask() {
     li.appendChild(span);
     li.appendChild(deleteBtn);
     document.getElementById("taskList").appendChild(li);
-    
+
     taskInput.value = "";
+}
+
+function deleteAll() {
+    let list = document.getElementById("taskList");
+    list.innerHTML = "";
 }
