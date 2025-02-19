@@ -1,13 +1,8 @@
-<h1>Магазин</h1>
-
+<h1>SHOP (mini)</h1>
 <div class="categories">
   <button *ngFor="let category of categories" (click)="selectCategory(category)">
     {{ category }}
   </button>
 </div>
 
-<app-product-list 
-  [products]="products" 
-  (likeProduct)="handleLike($event)" 
-  (removeProduct)="handleRemove($event)">
-</app-product-list>
+<app-product-list [products]="filteredProducts"></app-product-list>
