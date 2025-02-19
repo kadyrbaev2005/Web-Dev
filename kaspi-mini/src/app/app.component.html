@@ -5,4 +5,8 @@
   </button>
 </div>
 
-<app-product-list [products]="filteredProducts"></app-product-list>
+<app-product-list 
+  [products]="filteredProducts" 
+  (likeProduct)="onLikeProduct($event)" 
+  (removeProduct)="onRemoveProduct($event)">
+</app-product-list>

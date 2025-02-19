@@ -20,17 +20,23 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.filterProducts();
-  }
-
-  filterProducts() {
-    if (!this.products) return;
-    this.filteredProducts = this.products.filter(product => product.rating > 4);
+    this.filteredProducts = this.products;
   }
 
   selectCategory(category: string) {
     this.selectedCategory = category;
     this.filteredProducts = this.products.filter(p => p.category === category);
+  }
+
+  onLikeProduct(id: number) {
+    this.filteredProducts = this.filteredProducts.map(product =>
+      product.id === id ? { ...product, likes: (product.likes || 0) + 1 } : product
+    );
+  }
+  
+  onRemoveProduct(id: number) {
+    this.products = this.products.filter(product => product.id !== id);
+    this.filteredProducts = this.products.filter(product => product.category === this.selectedCategory);
   }
 
   handleLike(productId: number) {
