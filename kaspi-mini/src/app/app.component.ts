@@ -38,16 +38,4 @@ export class AppComponent implements OnInit {
     this.products = this.products.filter(product => product.id !== id);
     this.filteredProducts = this.products.filter(product => product.category === this.selectedCategory);
   }
-
-  handleLike(productId: number) {
-    const product = this.products.find(p => p.id === productId);
-    if (product) {
-      product.likes = (product.likes || 0) + 1;
-    }
-  }
-
-  handleRemove(productId: number) {
-    this.products = this.products.filter(p => p.id !== productId);
-    this.filteredProducts = this.filteredProducts.filter(p => p.id !== productId);
-  }
 }
