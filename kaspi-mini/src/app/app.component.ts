@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PRODUCTS } from './data/products';
 import { Product } from './models/product.model';
 import { CommonModule } from '@angular/common';
@@ -6,36 +6,42 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [CommonModule, ProductListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  categories = ['Смартфоны', 'Ноутбуки', 'Аксессуары', 'Планшеты'];
-  selectedCategory: string = 'Смартфоны';
-  products: Product[] = [];
+export class AppComponent implements OnInit {
+  products: Product[] = PRODUCTS;
+  filteredProducts: Product[] = [];
+  selectedCategory: string = '';
+  categories: string[] = ['Smartphones', 'Laptops', 'TV', 'Tablets'];
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit() {
     this.filterProducts();
   }
 
   filterProducts() {
-    this.products = PRODUCTS.filter(p => p.category === this.selectedCategory);
+    if (!this.products) return;
+    this.filteredProducts = this.products.filter(product => product.rating > 4);
   }
 
   selectCategory(category: string) {
     this.selectedCategory = category;
-    this.filterProducts();
+    this.filteredProducts = this.products.filter(p => p.category === category);
   }
 
   handleLike(productId: number) {
     const product = this.products.find(p => p.id === productId);
     if (product) {
-      product.likes++;
+      product.likes = (product.likes || 0) + 1;
     }
   }
 
   handleRemove(productId: number) {
     this.products = this.products.filter(p => p.id !== productId);
+    this.filteredProducts = this.filteredProducts.filter(p => p.id !== productId);
   }
 }
