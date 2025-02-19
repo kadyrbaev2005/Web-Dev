@@ -1,1 +1,15 @@
-<app-products></app-products>
+<h1>Магазин</h1>
+
+<!-- Список категорий -->
+<div class="categories">
+  <button *ngFor="let category of categories" (click)="selectCategory(category)">
+    {{ category }}
+  </button>
+</div>
+
+<!-- Список товаров -->
+<app-product-list 
+  [products]="products" 
+  (likeProduct)="handleLike($event)" 
+  (removeProduct)="handleRemove($event)">
+</app-product-list>

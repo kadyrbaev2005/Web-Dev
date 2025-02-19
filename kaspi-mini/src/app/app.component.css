@@ -1,0 +1,15 @@
+.categories {
+    margin-bottom: 20px;
+}
+.categories button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.categories button:hover {
+    background-color: #0056b3;
+}
