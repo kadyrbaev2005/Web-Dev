@@ -29,9 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   onLikeProduct(id: number) {
-    this.filteredProducts = this.filteredProducts.map(product =>
-      product.id === id ? { ...product, likes: (product.likes || 0) + 1 } : product
-    );
+    this.filteredProducts = this.filteredProducts.map(product => product.id === id ? { ...product, likes: product.likes < 1 ? (product.likes || 0) + 1  : product.likes - 1} : product)
   }
   
   onRemoveProduct(id: number) {

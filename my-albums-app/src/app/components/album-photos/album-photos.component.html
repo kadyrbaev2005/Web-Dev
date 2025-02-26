@@ -1,0 +1,14 @@
+<h2>Photos</h2>
+    <div *ngIf="photos.length; else noPhotos">
+      <div *ngFor="let photo of photos">
+        <p>{{ photo.title }}</p>
+        <img [src]="photo.url" alt="{{ photo.title }}">
+        <hr>
+      </div>
+    </div>
+
+    <ng-template #noPhotos>
+      <p>No photos found.</p>
+    </ng-template>
+
+<button (click)="goBack()">Return</button>

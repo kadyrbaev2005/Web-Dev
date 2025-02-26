@@ -1,0 +1,14 @@
+<h2>Albums</h2>
+<div>
+    <input [(ngModel)]="newAlbumTitle" placeholder="New album title">
+    <button (click)="createAlbum()">Create</button>
+</div>
+
+<ul *ngIf="albums">
+    <li *ngFor="let album of albums">
+    <span (click)="goToAlbumDetail(album.id)" style="cursor:pointer; margin-right: 10px;">
+        {{ album.title }}
+    </span>
+    <button (click)="deleteAlbum(album.id)">Delete</button>
+    </li>
+</ul>
