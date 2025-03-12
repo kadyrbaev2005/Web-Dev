@@ -1,0 +1,12 @@
+To create environment: 
+    virtualenv myenv
+To activate environment:
+    source myenv/bin/activate
+
+To create a Django project:
+    django-admin startproject myproject
+To run Django server:
+    python3 manage.py runserver
+
+To create a SuperUser:
+    python3 manage.py createsuperuser
